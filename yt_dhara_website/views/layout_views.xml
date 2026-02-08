@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Customize Header -->
+    <template id="dhara_header" inherit_id="website.template_header_default" name="Dhara Header">
+        <xpath expr="//header" position="attributes">
+            <attribute name="class" add="dhara-primary-bg" separator=" "/>
+        </xpath>
+        <xpath expr="//div[@id='o_main_nav']//ul" position="inside">
+            <li class="nav-item ms-3">
+                <a href="/contactus" class="btn btn-dhara-primary">Request Quote</a>
+            </li>
+        </xpath>
+    </template>
+
+    <!-- Customize Footer -->
+    <template id="dhara_footer" inherit_id="website.footer_custom" name="Dhara Footer">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
+                <section class="s_text_block pt40 pb16" data-snippet="s_text_block" data-name="Text">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h5>Dhara Enterprise</h5>
+                                <p>Your trusted partner for industrial electrical products and services.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa fa-phone"/> +91 98765 43210</li>
+                                    <li><i class="fa fa-envelope"/> info@dharaenterprise.com</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h5>Quick Links</h5>
+                                <ul class="list-unstyled">
+                                    <li><a href="/shop">Shop</a></li>
+                                    <li><a href="/shop/category/services">Services</a></li>
+                                    <li><a href="/contactus">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h5>Categories</h5>
+                                <ul class="list-unstyled">
+                                    <li><a href="/shop/category/switchgear">Switchgear</a></li>
+                                    <li><a href="/shop/category/wires">Wires &amp; Cables</a></li>
+                                    <li><a href="/shop/category/motors-pumps">Motors</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="o_footer_copyright o_colored_level pl-0 pr-0">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm text-center text-md-left text-muted">
+                                <span class="o_footer_copyright_name me-2">Copyright © Dhara Enterprise</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

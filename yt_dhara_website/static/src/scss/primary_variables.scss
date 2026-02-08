@@ -1,0 +1,22 @@
+$o-dhara-navy: #002b5c;
+$o-dhara-orange: #ff6700;
+$o-dhara-grey: #333333;
+
+/* Override Bootstrap/Odoo variables if needed, or just use these in your layout */
+.dhara-primary-bg {
+    background-color: $o-dhara-navy;
+    color: white;
+}
+
+.dhara-accent-text {
+    color: $o-dhara-orange;
+}
+
+.btn-dhara-primary {
+    background-color: $o-dhara-orange;
+    color: white;
+    &:hover {
+        background-color: darken($o-dhara-orange, 10%);
+        color: white;
+    }
+}
